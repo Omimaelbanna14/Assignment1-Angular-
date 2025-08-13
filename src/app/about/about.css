@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about {
+    background-color: #1abc9c;
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex !important;
+}
+
+.line {
+    width: 120px;
+    height: 4px;
+    background-color: white;
+    margin: 0 15px;
+}

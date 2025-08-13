@@ -1,0 +1,33 @@
+<section class="pt-5">
+    <h1 class="title fw-bold text-uppercase fs-1 mb-3 pt-5 text-center justify-content-center align-items-center">conatct section</h1>
+    <div class="star d-flex justify-content-center align-items-center">
+        <div class="line"></div>
+        <i class="star fa-solid fa-star"></i>
+        <div class="line"></div>
+    </div>
+    <div class="container">
+        <form class="w-50 p-3 mx-auto mt-5">
+            <div class="item mb-3">
+                <label #userName [style]="{transition:'all .5s'}" for="userName" class="from-label opacity-0 text-light position-relative top-0">userName :</label>
+                <input #inputName (input)="inputName.value?show(userName):hide(userName)" type="text" class="form-control border-0 border-bottom py-3 position-relative"
+                    placeholder="userName" id="userName">
+            </div>
+            <div class="item mb-3">
+                <label #userAge [style]="{transition:'all .5s'}" for="userAge" class="from-label opacity-0 text-light position-relative top-0">userAge :</label>
+                <input #inputAge (input)="inputAge.value?show(userAge):hide(userAge)" type="text" class="form-control border-0 border-bottom py-3 position-relative"
+                    placeholder="userAge" id="userAge">
+            </div>
+            <div class="item mb-3">
+                <label #userEmail [style]="{transition:'all .5s'}" for="userEmail" class="from-label opacity-0 text-light position-relative top-0">userEmail :</label>
+                <input #inputEmail (input)="inputEmail.value?show(userEmail):hide(userEmail)" type="text" class="form-control border-0 border-bottom py-3 position-relative"
+                    placeholder="userEmail" id="userEmail">
+            </div>
+            <div class="item mb-3">
+                <label #userPassword [style]="{transition:'all .5s'}" for="userPassword" class="from-label opacity-0 text-light position-relative top-0">userPassword :</label>
+                <input #inputPassword (input)="inputPassword.value?show(userPassword):hide(userPassword)" type="text" class="form-control border-0 border-bottom py-3 position-relative"
+                    placeholder="userPassword" id="userPassword">
+            </div>
+            <button type="button" class="btn bg-light mt-4 text-white">send Message</button>
+        </form>
+    </div>
+</section>

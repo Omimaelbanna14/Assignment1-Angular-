@@ -1,0 +1,27 @@
+<section class="portfolio text-center mt-5 pt-5 pb-3">
+    <div class="title text-center pt-4">
+        <h1 class="fw-bold text-center text-uppercase mb-3 fs-1">portfolio component</h1>
+    </div>
+    <div class="star d-flex justify-content-center align-items-center">
+        <div class="line"></div>
+        <i class="fa-solid fa-star"></i>
+        <div class="line"></div>
+    </div>
+    <div class="container">
+        <div class="row g-3 mt-1">
+            @for (item of PortfolioItem; track $index) {
+            <div class="col-lg-4 col-md-6 p-2">
+                <div class="box-img overflow-hidden position-relative rounded-3">
+                    <img [src]="item" class="w-100 d-block rounded-3" alt="port">
+                    <div class="overlay d-flex justify-content-center align-items-center position-absolute start-0 w-100 top-0 h-100" (click)="flag = false ; modelImage = item">
+                        <i class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+<div (click)="hideModal($event.target, img)" [class.d-none]="flag" class="model position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-primary bg-opacity-25">
+<img #img [src]="modelImage" alt="port" width="650" class="rounded-3">
+</div>
